@@ -18,17 +18,17 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `records`
+-- Database: `mutiny`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `records`
+-- Table structure for table `mutiny`
 --
 
-DROP TABLE IF EXISTS `records`;
-CREATE TABLE IF NOT EXISTS `records` (
+DROP TABLE IF EXISTS `mutiny`;
+CREATE TABLE IF NOT EXISTS `mutiny` (
   `public` tinyint(1) NOT NULL,
   `address` text NOT NULL,
   `city` text NOT NULL,
