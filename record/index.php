@@ -15,7 +15,7 @@ $state = mysqli_real_escape_string($conn, $_POST['state']);
 $zip = mysqli_real_escape_string($conn, $_POST['zip']);
 $selection = $_POST['selection'];
 include('../debrev.php');
-$sql = "SELECT * FROM `mutiny`";
+$sql = "SELECT * FROM `records`";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 $duplicate = false;
@@ -47,7 +47,7 @@ echo '<tr><td align="center"><input type="submit" value="Report this record?" />
 echo '</table>';
 echo '</form>';}}
 while($duplicate == false && $recorded == false):
-$sql = "INSERT INTO `mutiny` (public, address, city, state, zip, selection) VALUES ('$public', '$address', '$city', '$state', '$zip', '$selection')";
+$sql = "INSERT INTO `records` (public, address, city, state, zip, selection) VALUES ('$public', '$address', '$city', '$state', '$zip', '$selection')";
 if(mysqli_query($conn, $sql)){
 if($public == 1){
 if($selection == 'current'){
@@ -78,10 +78,10 @@ echo '</table>';}
 } else {echo 'Error: ' . $sql . '<br/>' . mysqli_error($conn);}
 $recorded = true;		
 endwhile;
-$sql = "SELECT * FROM `mutiny` WHERE `selection`='current'";
+$sql = "SELECT * FROM `records` WHERE `selection`='current'";
 $result = mysqli_query($conn, $sql);
 $total_current = mysqli_num_rows($result);
-$sql = "SELECT * FROM `mutiny` WHERE `selection`='new'";
+$sql = "SELECT * FROM `records` WHERE `selection`='new'";
 $result = mysqli_query($conn, $sql);
 $total_new = mysqli_num_rows($result);
 echo '<br/>';

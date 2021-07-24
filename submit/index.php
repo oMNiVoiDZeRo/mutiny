@@ -16,7 +16,7 @@ session_destroy();}
 if($_POST['upload'] == null){$upload = '../test/data/file.ext';}
 else {$upload = $_POST['upload'];}
 include('../header.php');
-$sql = "INSERT INTO `mutiny` (address, upload) VALUES ('$address', '$upload')";
+$sql = "INSERT INTO `reports` (address, upload) VALUES ('$address', '$upload')";
 if(mysqli_query($conn, $sql)){
 if(!isset($private)){
 echo '<table border="1" cellpadding="10" align="center">';

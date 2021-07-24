@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 28, 2020 at 02:18 AM
+-- Generation Time: Jul 24, 2021 at 03:19 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -24,11 +24,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mutiny`
+-- Table structure for table `records`
 --
 
-DROP TABLE IF EXISTS `mutiny`;
-CREATE TABLE IF NOT EXISTS `mutiny` (
+DROP TABLE IF EXISTS `records`;
+CREATE TABLE IF NOT EXISTS `records` (
   `public` tinyint(1) NOT NULL,
   `address` text NOT NULL,
   `city` text NOT NULL,
@@ -36,6 +36,16 @@ CREATE TABLE IF NOT EXISTS `mutiny` (
   `zip` text NOT NULL,
   `selection` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `records`
+--
+
+INSERT INTO `records` (`public`, `address`, `city`, `state`, `zip`, `selection`) VALUES
+(1, '2277 South Grove Street, Apartment 114', 'Ypsilanti', 'Michigan', '48198', 'current'),
+(0, '2277 South Grove Street, Apartment 113', 'Ypsilanti', 'Michigan', '48198', 'new'),
+(1, '2277 South Grove Street, Apartment 112', 'Ypsilanti', 'Michigan', '48198', 'current'),
+(1, '3001 Lake East Drive', 'Las Vegas', 'Nevada', '89117', 'current');
 
 -- --------------------------------------------------------
 
