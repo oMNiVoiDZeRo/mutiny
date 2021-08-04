@@ -19,7 +19,8 @@ echo '</td></tr></table>';
 } else {
 echo '<table border="1" cellpadding="10" align="center">';
 echo '<tr><td align="center"><strong>Address</strong></td><td align="center"><strong>Upload</strong></td></tr>';
-echo '<tr><td class="x"><input type="hidden" name="address" value="' . $row['address'] . '" />' . $row['address'] . '</td><td>' . $row['upload'] . '</td></tr>';}
+foreach($result as $row){
+echo '<tr><td class="x"><input type="hidden" name="address" value="' . $row['address'] . '" />' . $row['address'] . '</td><td>' . $row['upload'] . '</td></tr>';}}
 echo '</table>';
 echo '<br/>';
 echo '<center><a href="../">View public records.</a></center>';

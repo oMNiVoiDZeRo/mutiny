@@ -6,7 +6,7 @@
 </head>
 <body>
 <center><strong>You are about to report an illegal record.</strong></center><br/>
-<form name="report" action="../submit/" method="post">
+<form name="report" action="../submit/" method="post" enctype="multipart/form-data">
 <table border="1" cellpadding="10" align="center">
 <?php
 	session_start();
@@ -36,7 +36,7 @@
 ?>
 <tr><td align="center">
 <br/>
-<input type="file" name="upload" /><br/>
+<input type="file" name="fileToUpload" id="fileToUpload" /><br/>
 <br/>
 </td></tr>
 <tr><td align="center"><input type="submit" value="Report!" /></td></tr>
