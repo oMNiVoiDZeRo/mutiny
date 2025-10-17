@@ -4,8 +4,9 @@ body {
 }
 
 table {
-	max-width: 50%;
-	min-width: 333px;
+	width: 90%;
+	max-width: 800px;
+	min-width: 400px;
 }
 
 input[type=checkbox]{
@@ -17,13 +18,12 @@ input[type=text] {
 	box-sizing: border-box;
 	width: 100%;
 	margin: 5px 0;
-	padding: 4%;
+	padding: 1vw;
 	text-align: center;
 }
 
 input[type=radio] {
-	margin: 0 -27px 2px 50%;
-	transform: translate(-33px, 2px);
+	margin: 0 20px 0 0;
 }
 
 input[type=file] {
@@ -37,4 +37,8 @@ input[type=file] {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+}
+
+::file-selector-button {
+	color: #000;
 }

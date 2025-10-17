@@ -1,8 +1,10 @@
 <!doctype html>
-<html>
+<html data-bs-theme="dark">
 <head>
 <title>Private Records</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="../style.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
 <?php
@@ -23,7 +25,7 @@ foreach($result as $row){
 $public = $row['public'];
 if($public == 1){
 $public = 'Public';}
-echo '<tr><td class="x"><form action="report/" method="post"><input type="hidden" name="address" value="' . $row['address'] . '" />' . $row['address'] . '</td><td>' . $row['city'] . '</td><td>' . $row['state'] . '</td><td>' . $row['zip'] . '</td><td><input type="submit" name="report" value="Report"/></form></tr>';}
+echo '<tr><td class="x"><form action="report/" method="post"><input type="hidden" name="address" value="' . $row['address'] . '" />' . $row['address'] . '</td><td>' . $row['city'] . '</td><td>' . $row['state'] . '</td><td>' . $row['zip'] . '</td><td><input class="btn btn-primary" type="submit" name="report" value="Report"/></form></tr>';}
 echo '</table>';}
 echo '<br/>';
 echo '<center><a href="../add/">Add record to database.</a></center>';
@@ -34,5 +36,6 @@ echo '<br/>';
 echo 'Error: ' . $sql . '<br/>' . mysqli_error($conn);}
 include('../footer.php');
 ?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
