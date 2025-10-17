@@ -27,6 +27,8 @@ echo '<tr><td class="x"><form action="report/" method="post"><input type="hidden
 echo '</table>';}
 echo '<br/>';
 echo '<center><a href="add/">Add record to database.</a></center>';
+echo '<br/>';
+echo '<center><a href="private/">View private records.</a></center>';
 } else {
 echo '<br/>';
 echo 'Error: ' . $sql . '<br/>' . mysqli_error($conn);}

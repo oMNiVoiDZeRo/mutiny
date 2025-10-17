@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Private Records</title>
-<link href="style.css" rel="stylesheet" />
+<link href="../style.css" rel="stylesheet" />
 </head>
 <body>
 <?php
@@ -26,7 +26,9 @@ $public = 'Public';}
 echo '<tr><td class="x"><form action="report/" method="post"><input type="hidden" name="address" value="' . $row['address'] . '" />' . $row['address'] . '</td><td>' . $row['city'] . '</td><td>' . $row['state'] . '</td><td>' . $row['zip'] . '</td><td><input type="submit" name="report" value="Report"/></form></tr>';}
 echo '</table>';}
 echo '<br/>';
-echo '<center><a href="add/">Add record to database.</a></center>';
+echo '<center><a href="../add/">Add record to database.</a></center>';
+echo '<br/>';
+echo '<center><a href="../">View public records.</a></center>';
 } else {
 echo '<br/>';
 echo 'Error: ' . $sql . '<br/>' . mysqli_error($conn);}
