@@ -7,6 +7,16 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+<header class="px-5 d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+	<a href="../" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+		<span class="fs-4">Mutiny</span>
+	</a>
+	<ul class="nav nav-pills">
+		<li class="nav-item"><a href="../" class="nav-link" aria-current="page">Public Records</a></li>
+		<li class="nav-item"><a href="../private" class="nav-link">Private Records</a></li>
+		<li class="nav-item"><a href="../add" class="nav-link">Add Record</a></li>
+	</ul>
+</header>
 <?php
 include('../header.php');
 if($conn == true){
@@ -26,6 +36,8 @@ echo '<tr><td class="x"><input type="hidden" name="address" value="' . $row['add
 echo '</table>';
 echo '<br/>';
 echo '<center><a href="../">View public records.</a></center>';
+echo '<br/>';
+echo '<center><a href="../private">View private records.</a></center>';
 } else {
 echo '<br/>';
 echo 'Error: ' . $sql . '<br/>' . mysqli_error($conn);}

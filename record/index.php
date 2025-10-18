@@ -7,6 +7,16 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+<header class="px-5 d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+	<a href="../" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+		<span class="fs-4">Mutiny</span>
+	</a>
+	<ul class="nav nav-pills">
+		<li class="nav-item"><a href="../" class="nav-link" aria-current="page">Public Records</a></li>
+		<li class="nav-item"><a href="../private" class="nav-link">Private Records</a></li>
+		<li class="nav-item"><a href="../add" class="nav-link">Add Record</a></li>
+	</ul>
+</header>
 <?php
 if(isset($_POST['address']) && isset($_POST['city']) && isset($_POST['state']) && isset($_POST['zip']) && isset($_POST['selection'])){
 include('../header.php');

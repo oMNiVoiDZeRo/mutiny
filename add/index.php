@@ -7,6 +7,17 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+<header class="px-5 d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+	<a href="../" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+		<span class="fs-4">Mutiny</span>
+	</a>
+	<span class="fs-4">Mutiny</span> </a>
+	<ul class="nav nav-pills">
+		<li class="nav-item"><a href="../" class="nav-link" aria-current="page">Public Records</a></li>
+		<li class="nav-item"><a href="private" class="nav-link">Private Records</a></li>
+		<li class="nav-item"><a href="add" class="nav-link active">Add Record</a></li>
+	</ul>
+</header>
 <center><strong>You are about to add a record.</strong></center><br/>
 <table border="1" cellpadding="10" align="center">
 <form name="vote" action="../record/" method="post">
